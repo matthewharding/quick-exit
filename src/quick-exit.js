@@ -30,9 +30,11 @@
 		href = href || target.getElementsByTagName( 'a' )[ 0 ].href || 'about:blank';
 
 		/* jshint -W040 */
-		window.location = href;
+		document.body.innerHTML = '';
+                location.replace(href)
+		//window.location = href;
 		/* jshint +W040 */
-
+		
 		event.preventDefault();
 		return false;
 	}
